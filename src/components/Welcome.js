@@ -2,14 +2,15 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import '../App.css';
 
-const Cover = ({ welcomeImg, welcomeCorner }) => {
-  if (welcomeImg) {
+const Cover = ({ welcomeImg, welcomeCorner, buttonIcon }) => {
+  if (welcomeImg && welcomeCorner && buttonIcon) {
     return (
       <div className="Welcome">
         <div>
           <img src={welcomeImg} className="Welcome-logo" alt="logo" />
           <p>Самая вкусная пицца в WEB3</p>
           <Button onClick="" variant="outline-light" className="rounded-pill px-3 mt-3">
+            <img src={buttonIcon} className="Button-logo" alt="logo" />
             Connect Wallet
           </Button>
         </div>

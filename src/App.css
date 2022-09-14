@@ -11,7 +11,18 @@
 
 .Welcome-logo {
   height: 70vmin;
-  pointer-events: none;
+}
+
+.Button-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  display: inline-block;
+  vertical-align: text-top;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .Welcome-corner {
