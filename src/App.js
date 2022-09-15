@@ -1,15 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/app.scss';
 
-import Cover from './components/Welcome';
-import welcomeLogo from './assets/welcome-slice.svg';
-import welcomeCorner from './assets/welcome-corner.png';
-import nearIcon from './assets/near_icon.png';
+import Header from './components/Header';
+import Sort from './components/Sort';
+import Pizza from './components/Pizza';
+import Categories from './components/Categories';
+import pizzas from './assets/pizzas.json';
 
 function App() {
   return (
-    <div className="App">
-      <Cover welcomeImg={welcomeLogo} welcomeCorner={welcomeCorner} buttonIcon={nearIcon} />
+    <div className="wrapper">
+      <Header />
+      <div className="content">
+        <div className="container">
+          <div className="content__top">
+            <Categories />
+            <Sort />
+          </div>
+          <h2 className="content__title">Все пиццы</h2>
+          <div className="content__items">
+            {pizzas.map((obj) => (
+              <Pizza {...obj} />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
