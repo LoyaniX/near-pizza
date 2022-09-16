@@ -1,0 +1,40 @@
+.Welcome {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Welcome-logo {
+  height: 70vmin;
+}
+
+.Button-logo {
+  width: 23px;
+  height: 18px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.Welcome-corner {
+  height: 30vmin;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.Text-bottom {
+  text-align: center;
+  position: absolute;
+  left: auto;
+  bottom: 0;
+  font-size: calc(5px + 1vmin);
+}
