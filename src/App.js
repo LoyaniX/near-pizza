@@ -5,10 +5,9 @@ import appLogo from './assets/img/welcome-slice.svg';
 import appFooterLogo from './assets/img/welcome-corner.png';
 import logInButtonLogo from './assets/img/near_icon.png';
 import './scss/app.scss';
-import './app.css';
 
 const App = () => {
-  const [isLogIn, setIsLogin] = React.useState(0);
+  const [isLogIn, setIsLogin] = React.useState(1);
 
   const updateData = (value) => {
     setIsLogin(value);
