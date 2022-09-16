@@ -1,0 +1,38 @@
+.root {
+  li {
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    a {
+      text-align: center;
+      width: 45px;
+      line-height: 43px;
+      height: 45px;
+      border: 1px solid #fe5f1e;
+      border-radius: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      color: #fe5f1e !important;
+
+      &:hover {
+        background-color: #fe5f1e;
+        color: #fff !important;
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: #fe5f1e;
+        color: #fff !important;
+      }
+    }
+  }
+}
