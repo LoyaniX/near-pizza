@@ -5,26 +5,29 @@ import Categories from '../components/Categories';
 import Sceleton from '../components/pizza/Skeleton';
 import Pagination from '../components/Pagination';
 
+import { setCategoryId } from '../redux/slices/filterSlice';
+import { useSelector, useDispatch } from 'react-redux';
+
 const Home = () => {
+  const dispatch = useDispatch();
+  const { categoryId, sort, pageCount } = useSelector((state) => state.filter);
+
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [categoryId, setCategoryId] = React.useState(0);
-  const [currentPage, setCurrentPage] = React.useState(1);
-  const [sortType, setSortType] = React.useState({
-    name: 'возрастанию популярности',
-    sortProprty: 'rating',
-    type: 'asc',
-  });
+
+  const onChangeCategory = (id) => {
+    dispatch(setCategoryId(id));
+  };
 
   React.useEffect(() => {
     setIsLoading(true);
 
     const category = categoryId > 0 ? `category=${categoryId}` : '';
-    const sortBy = sortType.sortProprty;
-    const order = sortType.type;
+    const sortBy = sort.sortProprty;
+    const order = sort.type;
 
     fetch(
-      `https://63238c5b5c1b43572797b48f.mockapi.io/items?page=${currentPage}&limit=4${category}&sortBy=${sortBy}&order=${order}`,
+      `https://63238c5b5c1b43572797b48f.mockapi.io/items?page=${pageCount}&limit=4&${category}&sortBy=${sortBy}&order=${order}`,
     )
       .then((resp) => resp.json())
       .then((json) => {
@@ -32,21 +35,21 @@ const Home = () => {
         setIsLoading(false);
       });
     window.scrollTo(0, 0);
-  }, [categoryId, sortType, currentPage]);
+  }, [categoryId, sort, pageCount]);
 
   return (
     <div className="container">
       <div className="content__top">
-        <Categories value={categoryId} onChangeCategory={(id) => setCategoryId(id)} />
-        <Sort value={sortType} onChangeSortType={(id) => setSortType(id)} />
+        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
+        <Sort />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">
         {isLoading
-          ? [...new Array(6)].map((_, index) => <Sceleton key={index} />)
+          ? [...new Array(4)].map((_, index) => <Sceleton key={index} />)
           : items.map((obj) => <Pizza key={obj.id} {...obj} />)}
       </div>
-      <Pagination onChangePage={(number) => setCurrentPage(number)} />
+      <Pagination />
     </div>
   );
 };

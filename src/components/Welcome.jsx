@@ -11,7 +11,7 @@ const Welcome = ({ welcomeImg, welcomeCorner, buttonIcon, logInCallback }) => {
           <Button
             onClick={() => logInCallback(1)}
             variant="outline-light"
-            className="rounded-pill px-3 mt-3"
+            className="rounded-pill px-3 mt-3 connect-wallet-button"
           >
             <img src={buttonIcon} className="Button-logo" alt="logo" />
             Подключить кошелек

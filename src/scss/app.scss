@@ -335,17 +335,18 @@ body {
   }
 
   &--empty {
-    margin: 0 auto;
-    width: 560px;
+    margin: 80px auto;
+    width: 620px;
     text-align: center;
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
     p {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 145.4%;
       letter-spacing: 0.01em;
       color: #777777;
@@ -388,11 +389,11 @@ body {
 }
 
 .Button-logo {
-  width: 23px;
+  width: 20px;
   height: 18px;
   margin-right: 10px;
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: -3px;
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
@@ -420,4 +421,16 @@ body {
 ol,
 ul {
   padding-left: 0rem !important;
+}
+
+.connect-wallet-button {
+  border: 1px solid #fe5f1e !important;
+  &:hover {
+    background-color: #fe5f1e !important;
+    color: #fff !important;
+  }
+}
+
+a {
+  text-decoration: none !important;
 }
