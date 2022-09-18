@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/near-pizza/static/css/main.cf2d15d8.chunk.css",
+    "main.js": "/near-pizza/static/js/main.05020f54.chunk.js",
+    "main.js.map": "/near-pizza/static/js/main.05020f54.chunk.js.map",
+    "runtime-main.js": "/near-pizza/static/js/runtime-main.3e457deb.js",
+    "runtime-main.js.map": "/near-pizza/static/js/runtime-main.3e457deb.js.map",
+    "static/css/2.8e780b34.chunk.css": "/near-pizza/static/css/2.8e780b34.chunk.css",
+    "static/js/2.29709b2d.chunk.js": "/near-pizza/static/js/2.29709b2d.chunk.js",
+    "static/js/2.29709b2d.chunk.js.map": "/near-pizza/static/js/2.29709b2d.chunk.js.map",
+    "index.html": "/near-pizza/index.html",
+    "static/css/2.8e780b34.chunk.css.map": "/near-pizza/static/css/2.8e780b34.chunk.css.map",
+    "static/css/main.cf2d15d8.chunk.css.map": "/near-pizza/static/css/main.cf2d15d8.chunk.css.map",
+    "static/js/2.29709b2d.chunk.js.LICENSE.txt": "/near-pizza/static/js/2.29709b2d.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/near-pizza/static/media/bootstrap-icons.ea98e12d.woff2",
+    "static/media/empty-cart.db905d1f.png": "/near-pizza/static/media/empty-cart.db905d1f.png",
+    "static/media/near_icon.f3c8783b.png": "/near-pizza/static/media/near_icon.f3c8783b.png",
+    "static/media/pizza-logo.56ac8703.svg": "/near-pizza/static/media/pizza-logo.56ac8703.svg",
+    "static/media/welcome-corner.c2c8c9ce.png": "/near-pizza/static/media/welcome-corner.c2c8c9ce.png",
+    "static/media/welcome-slice.e463cef2.svg": "/near-pizza/static/media/welcome-slice.e463cef2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e457deb.js",
+    "static/css/2.8e780b34.chunk.css",
+    "static/js/2.29709b2d.chunk.js",
+    "static/css/main.cf2d15d8.chunk.css",
+    "static/js/main.05020f54.chunk.js"
+  ]
+}
