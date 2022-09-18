@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItems } from '../../redux/slices/cartSlice';
+import { utils } from 'near-api-js';
 
 const Pizza = ({ id, name, price, imageUrl, sizes, types }) => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const Pizza = ({ id, name, price, imageUrl, sizes, types }) => {
     const item = {
       id,
       name,
-      price,
+      price: utils.format.formatNearAmount(price),
       imageUrl,
       type: typeNames[activeType],
       size: sizes[activeSize],
@@ -60,7 +61,7 @@ const Pizza = ({ id, name, price, imageUrl, sizes, types }) => {
           </ul>
         </div>
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">{price} NEARs</div>
+          <div className="pizza-block__price">{utils.format.formatNearAmount(price)} NEARs</div>
           <button className="button button--outline button--add" onClick={onClickAdd}>
             <svg
               width="12"

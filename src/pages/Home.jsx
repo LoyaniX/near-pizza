@@ -5,6 +5,8 @@ import Categories from '../components/Categories';
 import Sceleton from '../components/pizza/Skeleton';
 import Pagination from '../components/Pagination';
 
+import { getProducts } from '../utils/marketplace';
+
 import { setCategoryId } from '../redux/slices/filterSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -19,9 +21,20 @@ const Home = () => {
     dispatch(setCategoryId(id));
   };
 
+  const getProductList = React.useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setItems(await getProducts());
+    } catch (error) {
+      console.log({ error });
+    } finally {
+      setIsLoading(false);
+    }
+  });
+
   React.useEffect(() => {
     setIsLoading(true);
-
+    /*
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const sortBy = sort.sortProprty;
     const order = sort.type;
@@ -34,6 +47,10 @@ const Home = () => {
         setItems(json);
         setIsLoading(false);
       });
+  */
+    getProductList();
+    console.log(items);
+    setIsLoading(false);
     window.scrollTo(0, 0);
   }, [categoryId, sort, pageCount]);
 

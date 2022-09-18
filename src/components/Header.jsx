@@ -1,9 +1,11 @@
 import logoImg from '../assets/img/pizza-logo.svg';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { utils } from 'near-api-js';
 
 const Header = () => {
   const { items, totalPrice } = useSelector((state) => state.cart);
+  const { accauntId } = useSelector((state) => state.authenticate);
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
@@ -19,6 +21,8 @@ const Header = () => {
             самая вкусная пицца в WEB3
           </div>
         </div>
+
+        <h5>Привет 👋 : {accauntId}</h5>
 
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">

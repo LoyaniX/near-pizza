@@ -1,6 +1,6 @@
 import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addItems, removeItems, minusItem } from '../redux/slices/cartSlice';
 
 const CartItem = ({ id, name, type, price, size, count, imageUrl }) => {
