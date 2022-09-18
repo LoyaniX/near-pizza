@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/near-pizza/static/css/main.cf2d15d8.chunk.css",
-    "main.js": "/near-pizza/static/js/main.05020f54.chunk.js",
-    "main.js.map": "/near-pizza/static/js/main.05020f54.chunk.js.map",
+    "main.js": "/near-pizza/static/js/main.b05e46ab.chunk.js",
+    "main.js.map": "/near-pizza/static/js/main.b05e46ab.chunk.js.map",
     "runtime-main.js": "/near-pizza/static/js/runtime-main.3e457deb.js",
     "runtime-main.js.map": "/near-pizza/static/js/runtime-main.3e457deb.js.map",
     "static/css/2.8e780b34.chunk.css": "/near-pizza/static/css/2.8e780b34.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.8e780b34.chunk.css",
     "static/js/2.29709b2d.chunk.js",
     "static/css/main.cf2d15d8.chunk.css",
-    "static/js/main.05020f54.chunk.js"
+    "static/js/main.b05e46ab.chunk.js"
   ]
 }
